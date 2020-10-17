@@ -1,7 +1,7 @@
-// COMPONENT NAME
+// dispatcher
 //
-// PROGRAMMER NAME
-// DATE
+// Madelynn Kim
+// 10/17/2020
 #pragma once
 
 #include "box.h"
@@ -11,6 +11,7 @@
 #include <string>
 using std::ostringstream;
 using std::string;
+//using namespace std;
 
 class Dispatcher {
 public:

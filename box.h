@@ -1,7 +1,7 @@
-// COMPONENT NAME
+// BOX
 //
-// PROGRAMMER NAME
-// DATE
+// Vincent Gabb
+// 10/05/2020
 #pragma once
 
 #include <sstream>

@@ -1,7 +1,7 @@
-// COMPONENT NAME
+// Truck
 //
-// PROGRAMMER NAME
-// DATE
+// Aaron Del Monte
+// 10/9/20
 #pragma once
 
 #include <sstream>
