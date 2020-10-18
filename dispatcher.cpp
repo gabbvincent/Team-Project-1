@@ -4,7 +4,7 @@ Dispatcher::Dispatcher() {
 
   deliveries = 0;
   box = Box(5, 150);
-  truck = Truck(10, 1000);
+  truck = Truck(10, 1500);
 
 }
 
@@ -21,22 +21,19 @@ void Dispatcher::placeOrder(unsigned int weight) {
   //          Add the incoming weight to the now empty Box
   //        Else -- empty the Box and add the incoming weight
 
-  box.packItem(weight);
-  
-  if (!box.packItem(weight)) {
-    truck.loadBox(weight);
-    if (!truck.loadBox(weight)){
+
+if (!box.packItem(weight)) {
+   if (!truck.loadBox(box.getCurrentWeight())) {
       truck.deliver();
       deliveries++;
-      truck.loadBox(0);
       box.packItem(weight);
-    } else {
-      box.emptyBox();
-      box.packItem(weight);
-    }
-  }
-
+} else {
+  box.emptyBox();
+  box.packItem(weight);
 }
+}
+}
+
 
 string Dispatcher::toString() {
 

@@ -35,12 +35,13 @@ bool Box::packItem(unsigned int weight) {
 
   if (this-> currentWeight + weight > this-> maxWeight) {
     return false;
-  } else {
+  } else if (this-> currentWeight + weight <= this-> maxWeight) {
     this-> currentWeight = this-> currentWeight + weight;
     this-> numItems++;
     
     return true;
   }
+  return 0;
 }
 
 
